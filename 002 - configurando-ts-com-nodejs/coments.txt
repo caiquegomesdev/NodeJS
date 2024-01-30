@@ -1,0 +1,6 @@
+//npm run prettier = organiza o codigo
+//npm i -D eslint
+// npm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-import
+//npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
+//npm i -D jest ts-jest @types/jest
+//npx ts-jest config:init

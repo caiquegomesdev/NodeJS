@@ -1,0 +1,18 @@
+NPM
+O npm (Node Package Manager) é o gerenciador de pacotes padrão para o ambiente Node.js. Ele é uma ferramenta de linha de comando que permite instalar, gerenciar e compartilhar bibliotecas e módulos de código JavaScript desenvolvidos por terceiros.
+
+O npm funciona como um repositório online de pacotes JavaScript, onde desenvolvedores podem publicar e compartilhar suas bibliotecas para que outros desenvolvedores possam utilizá-las em seus projetos. Além disso, o npm também permite que você instale e gerencie pacotes localmente em seus próprios projetos.
+
+Com o npm, você pode fazer o seguinte:
+
+Instalar pacotes: É possível instalar pacotes específicos do npm em seu projeto com o comando npm install <nome-do-pacote>. Isso baixa o pacote e suas dependências do repositório npm e os torna disponíveis para uso em seu código.
+
+Gerenciar dependências: O npm mantém um arquivo chamado package.json que registra as dependências do seu projeto. Você pode adicionar, atualizar ou remover pacotes diretamente no arquivo package.json e, em seguida, executar o comando npm install para instalar todas as dependências listadas no arquivo.
+
+Publicar pacotes: Se você criou uma biblioteca ou módulo JavaScript que deseja compartilhar com outros desenvolvedores, pode publicá-lo no npm. Isso permite que outros desenvolvedores instalem e usem sua biblioteca em seus próprios projetos.
+
+Atualizar pacotes: O npm facilita a atualização de pacotes para versões mais recentes. Você pode usar o comando npm update para atualizar todos os pacotes para suas versões mais recentes ou especificar pacotes individuais para atualização.
+
+Além disso, o npm oferece muitos recursos adicionais, como a capacidade de lidar com diferentes versões de pacotes, instalar pacotes globalmente no sistema, gerenciar scripts personalizados e muito mais.
+
+O npm é amplamente utilizado na comunidade Node.js e é uma ferramenta essencial para o desenvolvimento de projetos JavaScript e Node.js. Com o npm, você pode facilmente aproveitar a vasta variedade de pacotes e bibliotecas disponíveis, acelerando o desenvolvimento de seus projetos e promovendo a reutilização de código.

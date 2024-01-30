@@ -1,0 +1,19 @@
+**Como funciona o NodeJs**
+
+O Node.js é um ambiente de execução de código JavaScript que permite executar código JavaScript fora do navegador, no lado do servidor. O motor do Node.js é o componente responsável por interpretar e executar o código JavaScript.
+
+O motor do Node.js é baseado no mecanismo de execução V8, desenvolvido pela equipe do Google Chrome. O V8 é um mecanismo de código aberto e altamente otimizado que compila o código JavaScript em código de máquina de baixo nível, permitindo uma execução rápida e eficiente.
+
+Aqui está uma visão geral simplificada de como o motor do Node.js funciona:
+
+Análise léxica e sintática: O código JavaScript é lido e analisado pelo motor do Node.js. Ele passa por um processo de análise léxica e sintática para entender a estrutura do código, identificar as palavras-chave, os operadores, os identificadores e outros elementos do JavaScript.
+
+Criação de uma árvore de análise sintática (AST): Com base na análise léxica e sintática, o motor do Node.js constrói uma árvore de análise sintática (AST). Essa árvore representa a estrutura hierárquica do código JavaScript, ajudando a entender a ordem e a relação entre os diferentes elementos do código.
+
+Compilação: O próximo passo é a compilação do código JavaScript. O motor do Node.js usa o V8 para compilar o código JavaScript em código de máquina de baixo nível. Durante esse processo, o código é otimizado para melhor desempenho, por exemplo, removendo trechos de código inacessíveis ou substituindo determinadas operações por versões mais eficientes.
+
+Execução: Após a compilação, o código de máquina resultante é executado pelo motor do Node.js. O motor executa o código linha por linha, interpretando as instruções e realizando as operações conforme necessário.
+
+É importante destacar que o Node.js também fornece acesso a várias APIs e bibliotecas do sistema operacional, permitindo interações com arquivos, rede, bancos de dados e outros recursos. Isso é possível por meio da disponibilização de módulos e APIs nativas do Node.js, que são escritos em C++ e expostos para serem utilizados no código JavaScript.
+
+O motor do Node.js desempenha um papel fundamental na execução eficiente de código JavaScript no lado do servidor. Ele permite que os desenvolvedores aproveitem a linguagem JavaScript não apenas para a criação de aplicativos web no navegador, mas também para o desenvolvimento de servidores, APIs, ferramentas de linha de comando e muito mais.
