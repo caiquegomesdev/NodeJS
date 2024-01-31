@@ -1,0 +1,11 @@
+/[^\w\s-]/
+
+[]: Os Colchetes delimitam uma class de caracteres, ou seja, um conjunto de caracters que podem corresponder a um determinado padrao.
+
+^: Dentro dos colchetes, o acento circunflexo ^ representa uma negacao. Ele indica que queremos combinar qualquer caractere que nao esteja presente na classe de caracteres definida.
+
+\w: O \w e uma sequencia de escape que corresponde a qualquer caractere alfanumerico. Equivale a [a-zA-Z0-9].
+
+\s: O \s e uma sequencia de  escape que corresponde a qualquer caractere de espaco em branco, como espaco, tubulacao e quebra de linha.
+
+-: O hifen  - e um caractere literal dentro da class de caracteres
