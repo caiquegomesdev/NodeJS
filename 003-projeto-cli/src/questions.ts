@@ -1,6 +1,8 @@
 import { EChoicesBoilerPlate } from 'enum/choices-boilerplate.enum';
 import fs from 'node:fs';
 import path from 'path';
+import { EErros } from 'enum/errors.enum';
+import { EGitName } from 'enum/git-name.enum';
 
 export const questions = [
   {
@@ -16,24 +18,21 @@ export const questions = [
     validate(folderName: string) {
       console.log(folderName);
       // FolderName - nao pode ser null
-      if (!folderName) return 'Insira um valor para o nome!';
+      if (!folderName) return EErros.ERROR_NULL;
 
       // nao pode ter caracteres especiais
-      if (/[^\w\s-]/.test(folderName)) return 'Não use caracteres especiais!';
+      if (/[^\w\s-]/.test(folderName)) return EErros.ERROR_SPECIAL_CHARACTERES;
 
       //nao pode deixar com o mesmo nome da repo do git
-      if (
-        folderName === 'boilerpalte-typescript-nodejs' ||
-        folderName === 'boilerplate-scss'
-      )
-        return 'Nao e possivel criar a pasta com este nome!';
+      if (folderName === EGitName.NODEJS_TS || folderName === EGitName.SCSS)
+        return EErros.ERROR_GIT_NAME;
 
       //nao pode existir o mesmo nome do folderName
 
       try {
         const dir = path.resolve(folderName);
         fs.accessSync(dir, fs.constants.R_OK);
-        return 'Ja existe uma pasta com este nome!';
+        return EErros.ERROR_INVALID_FOLDER;
         console.log(dir);
       } catch (error) {}
       return true;
