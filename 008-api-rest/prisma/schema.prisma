@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String?
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  resetPasswordSecret ResetPasswordSecret?
+  userClient          UserClient[]
+  userClientFiles     UserClientFiles[]
+}
+
+model ResetPasswordSecret {
+  id     String @id @default(uuid())
+  secret Int
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @unique
+}
+
+model UserClient {
+  id        String   @id @default(uuid())
+  name      String
+  email     String?
+  phone     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  userClientFiles UserClientFiles[]
+}
+
+model UserClientFiles {
+  id          String   @id @default(uuid())
+  name        String
+  date        DateTime
+  file        String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  userClient   UserClient @relation(fields: [userClientId], references: [id], onDelete: Cascade)
+  userClientId String
+}
